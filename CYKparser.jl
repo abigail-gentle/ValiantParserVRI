@@ -1,5 +1,8 @@
 module CYKParser
-using Main.GrammarTools
+
+include("./GrammarTools.jl");
+using .GrammarTools
+
 using Random
 
 export CYKParse
