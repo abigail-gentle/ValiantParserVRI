@@ -1,0 +1,14 @@
+S0	-> number	| variable	| Open Expr_Close	| Factor PowOp_Primary	| Term MulOp_Factor	| Expr AddOp_Term	| AddOp Term
+Expr	-> number	| variable	| Open Expr_Close	| Factor PowOp_Primary	| Term MulOp_Factor	| Expr AddOp_Term	| AddOp Term
+Term	-> number	| variable	| Open Expr_Close	| Factor PowOp_Primary	| Term MulOp_Factor
+Factor	-> number	| variable	| Open Expr_Close	| Factor PowOp_Primary
+Primary	-> number	| variable	| Open Expr_Close
+AddOp	-> +	| −
+MulOp	-> *	| /
+PowOp	-> ^
+Open	-> (
+Close	-> )
+AddOp_Term	-> AddOp Term
+MulOp_Factor	-> MulOp Factor
+PowOp_Primary	-> PowOp Primary
+Expr_Close	-> Expr Close
